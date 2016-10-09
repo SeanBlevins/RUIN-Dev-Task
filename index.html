@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Verto Homes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      line-height: 1.8;
+      color: black;
+  }
+  
+  header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-image: url('assets/top-back@2x.jpg');
+    text-align: center;
+    color: white;
+  }
+  header .header-content {
+    position: relative;
+    text-align: center;
+    padding: 100px 15px 100px;
+    width: 100%;
+  }
+  .header-content img {
+    visibility: hidden;
+  }
+  
+  @media (min-width: 768px) {
+    header {
+      min-height: 100vh;
+    }
+    header .header-content {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding: 0 50px;
+    }
+    .header-content img {
+      max-height: 20%;
+      visibility: visible;
+    }
+  }  
+  
+  h1, h2, h3, h4, h5, h6 {
+      color: #95C21F;
+  }
+  
+  a {
+    color: #95C21F;
+  }
+  
+  .btn-verto {
+	  color: #fff;
+	  background-color: #95C21F;
+  }
+  
+  .automation-bg {
+    background-image: url("assets/vesta-back@2x.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center bottom;
+  }
+  
+  .container {
+    padding-top: 80px;
+  }
+  .flex {
+    height: 100%;
+	    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+	   display: -moz-box;      /* OLD: Firefox (buggy) */ 
+	   display: -ms-flexbox;   /* MID: IE 10 */
+	   display: -webkit-flex;  /* NEW, Chrome 21+ */
+	   display: flex;          /* NEW: Opera 12.1, Firefox 22+ */
+	   -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+	   -ms-flex-align: center; /* You know the drill now… */
+	   -webkit-align-items: center;
+	   align-items: center;
+  }
+  .carousel-caption img {
+    max-width: 66%;
+    padding-bottom: 5vh;
+  }
+  .navbar {
+      padding: 45px;
+      margin-bottom: 0;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 1px;
+      border-radius: 0;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #95C21F !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }  
+  .navbar.affix {
+    padding: 10px;
+    background-color: #95C21F !important;
+  }
+  .address {
+    line-height: 1.2;
+  }
+  footer {
+    padding: 25px;
+  }
+  .btn-lg {
+    margin-bottom: 35px;
+   }
+  .icon-bar {
+    background-color: white;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="80">
+
+<nav id="mainNav" class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="assets/large-v.png" alt="VERTO HOMES" width="50" height="50" style="float:left;">
+      <a class="navbar-brand" href="#myPage"><strong>VERTO</strong>HOMES</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">About</a></li>
+        <li><a href="#automation">Home Automation</a></li>
+        <li><a href="#homes">Latest Homes</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#press">Press</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+    <div class="header-content">
+        <img class="img-responsive center-block" src="assets/large-v.png" alt="Verto Homes">     
+    </div>
+</header>
+    
+<!-- Container (About Section) -->
+<div id="about" class="container text-center">
+  <br>
+  <h1>We are Verto Homes.</h1>
+  <h5>We are here to change the world.</h5><br>
+  <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est vide soluta aperiam eu. Tota dolorum mentitum et mel, quem justo ullum eu mea, tempor appareat democritum pro ut. Verterem elaboraret consequuntur qui ut. Offendit salutandi vix ut, et mei decore assentior vituperatoribus, modo eros quando ne nam.</p><br>
+  <button type="button" class="btn btn-verto btn-lg">Video introduction to Verto Homes</button><br>
+  <div class="row slideanim">
+    <div class="col-md-3 col-sm-6 text-center">
+      <h2>£275k</h2>
+      <h6>Total S106 Contribution</h4><br>
+    </div>
+    <div class="col-md-3 col-sm-6 text-center">
+      <h2>81</h2>
+      <h6>Homes Under Contruction</h4><br>
+    </div>
+    <div class="col-md-3 col-sm-6 text-center">
+      <h2>48</h2>
+      <h6>In House Employees</h4><br>
+    </div>
+    <div class="col-md-3 col-sm-6 text-center">
+      <h2>391</h2>
+      <h6>Lorem Ipsum Dolor</h4><br>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Sustainable Section) -->
+<div id="sustainable" class="container text-center">
+  <br>
+  <h1>Sustainable Living</h1></br>
+  <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est vide soluta aperiam eu. Tota dolorum mentitum et mel, quem justo ullum eu mea, tempor appareat democritum pro ut. Verterem elaboraret consequuntur qui ut. Offendit salutandi vix ut, et mei decore assentior vituperatoribus, modo eros quando ne nam.</p></br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img class="img-responsive center-block" src="assets/isr.png" alt="Integrated Solar">
+      <h6>Integrated Solar Roof</h4><br>
+    </div>
+    <div class="col-sm-4">
+      <img class="img-responsive center-block" src="assets/hp.png" alt="Heat Pump">
+      <h6>Heat Pump</h4><br>
+    </div>
+    <div class="col-sm-4">
+      <img class="img-responsive center-block" src="assets/evc.png" alt="Electric Vehicle Charging">
+      <h6>Electric Vehicle Charging</h4><br>
+    </div>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img class="img-responsive center-block" src="assets/hr.png" alt="Heat Recovery">
+      <h6>Heat Recovery</h4><br>
+    </div>
+    <div class="col-sm-4">
+      <img class="img-responsive center-block" src="assets/em.png" alt="Energy Management">
+      <h6>Energy Management</h4><br>
+    </div>
+    <div class="col-sm-4">
+      <img class="img-responsive center-block" src="assets/zhl.png" alt="Zero Heat Loss">
+      <h6>Zero Heat Loss</h4><br>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Home Automation Section) -->
+<div class="container-fluid text-center automation-bg">
+  <div id="automation" class="container automation-contenet">
+    <img class="img-responsive center-block" src="assets/vesta-logo.png" alt="Vesta">
+    <h1>The future of home automation.</h1><br>
+    <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est vide soluta aperiam eu. Tota dolorum mentitum et mel, quem justo ullum eu mea, tempor appareat democritum pro ut. Verterem elaboraret consequuntur qui ut. Offendit salutandi vix ut, et mei decore assentior vituperatoribus, modo eros quando ne nam.</p></br>
+    <button type="button" class="btn btn-verto btn-lg">Find out more</button><br>
+    <img class="img-responsive center-block" src="assets/vesta-phone.png" alt="Vesta">
+  </div>  
+</div>
+
+<!-- Container (Latest Homes Section) -->
+<div id="homes" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#homes" data-slide-to="0" class="active"></li>
+    <li data-target="#homes" data-slide-to="1"></li>
+    <li data-target="#homes" data-slide-to="2"></li>
+    <li data-target="#homes" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="assets/large-house@2x.jpg" alt="Towan Heights">
+      <div class="carousel-caption flex">
+        <div>
+          <img src="assets/towan-logo@2x.png" alt="Towan Heights">
+          <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est vide soluta aperiam eu.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/large-house-flip@2x.jpg" alt="Towan Heights">
+      <div class="carousel-caption flex">
+        <div>
+          <img src="assets/towan-logo@2x.png" alt="Towan Heights">
+          <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est vide soluta aperiam eu.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/large-house-ink@2x.jpg" alt="Towan Heights">
+      <div class="carousel-caption flex">
+        <div>
+          <img src="assets/towan-logo@2x.png" alt="Towan Heights">
+          <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est vide soluta aperiam eu.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="assets/large-house-blur@2x.jpg" alt="Towan Heights">
+      <div class="carousel-caption flex">
+        <div>
+          <img src="assets/towan-logo@2x.png" alt="Towan Heights">
+          <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est vide soluta aperiam eu.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <div class="row">
+    <!-- Contact Us -->
+    <div class="col-sm-5">
+      <h3>Contact Us</h3>
+      <div class="row address">
+        <div class="col-sm-6">
+          <p>Verto Homes</p>
+          <p>71 Queen Victoria Street</p>
+          <p>London</p>
+          <p>EC4V 4AY</p>
+        </div>  
+        <div class="col-sm-6">
+          <p>Tel: +44 (0)203 745 7374</p>
+          <p>Email: info@vertohomes.com</p>
+          <img src="assets/facebook.png" alt="Facebook">
+          <img src="assets/twitter.png" alt="Twitter">
+          <img src="assets/instagram.png" alt="Instagram">
+        </div>        
+      </div>
+      
+    </div>
+    <!-- Latest Post -->
+    <div class="col-sm-5">
+      <h3>Latest Post</h3>
+      <p>Sed ex eruditi feugait, ius assum movet scribentur in. Cum id quod eligendi disputando, eu eos altera omnesque democritum. Vim dolor primis delicata ut, est...</p>
+      <p><a href="#blog">Read more</a></p>
+    </div>
+    <!-- Awards -->
+    <div class="col-sm-2">
+      <h3><img class="img-responsive center-block" src="assets/awards.png" alt="Awards"></h3>
+    </div>
+    
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p><small>Copyright &copy 2015 Verto Homes, All rights reserved</small></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+  
+  $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    })
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
